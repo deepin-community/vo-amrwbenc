@@ -1,0 +1,40 @@
+Source: vo-amrwbenc
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Uploaders:
+ Reinhard Tartler <siretart@tauware.de>
+Build-Depends:
+ debhelper-compat (= 12)
+Standards-Version: 4.4.1
+Section: libs
+Homepage: http://opencore-amr.git.sourceforge.net/
+Vcs-Git: https://salsa.debian.org/multimedia-team/vo-amrwbenc.git
+Vcs-Browser: https://salsa.debian.org/multimedia-team/vo-amrwbenc
+
+Package: libvo-amrwbenc-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libvo-amrwbenc0 (= ${binary:Version}),
+ ${misc:Depends}
+Description: VisualOn AMR-WB encoder library (development files)
+ This library contains an encoder implementation of the Adaptive Multi
+ Rate Wideband (AMR-WB) audio codec. The library is based on a codec
+ implementation by VisualOn, part of the Stagefright framework from
+ the Google Android project.
+
+Package: libvo-amrwbenc0
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: VisualOn AMR-WB encoder library
+ This library contains an encoder implementation of the Adaptive Multi
+ Rate Wideband (AMR-WB) audio codec. The library is based on a codec
+ implementation by VisualOn, part of the Stagefright framework from
+ the Google Android project.
+ .
+ This package contains development files.

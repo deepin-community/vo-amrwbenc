@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+%:
+	dh $@
+
+override_dh_installdocs:
+	dh_installdocs
+	cp NOTICE debian/libvo-amrwbenc0/usr/share/doc/libvo-amrwbenc0
+	cp amrwbenc/NOTICE debian/libvo-amrwbenc0/usr/share/doc/libvo-amrwbenc0/NOTICE.amrwbenc
